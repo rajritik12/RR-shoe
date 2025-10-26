@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Ritik - Step Up Your Style</title>
+    <!-- Google Fonts for a modern look. Connects to Google's servers to get these fonts. -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- Link to our custom CSS file. This tells the HTML to use 'style.css' for styling. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header Section: Contains the company logo and navigation links -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">Raj Ritik</a> <!-- The company logo, links to home -->
+            <nav> <!-- Navigation menu -->
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#new-arrivals">New Arrivals</a></li>
+                    <li><a href="#features">Our Tech</a></li>
+                    <li><a href="#cta-banner">Shop Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area: All the main sections of the website go here -->
+    <main>
+        <!-- Hero Section: The very first and most prominent section when you open the website -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <!-- Hero content (headline, description, and button) -->
+                <!-- 'animate-on-scroll' and 'fade-in-up' classes are for the JavaScript-triggered animation -->
+                <div class="hero-content animate-on-scroll fade-in-up delay-0">
+                    <h1>Step Up Your Game.<br>Define Your Path.</h1>
+                    <p>Experience unparalleled comfort and cutting-edge design. Raj Ritik shoes are crafted for
+                        performance and style.</p>
+                    <a href="#new-arrivals" class="btn btn-primary animate-on-scroll fade-in-up delay-1">Explore
+                        Collection</a>
+                </div>
+                <!-- Display area for the main hero shoe image -->
+                <!-- 'animate-on-scroll' and 'fade-in-left' classes are for the JavaScript-triggered animation -->
+                <div class="hero-shoe-display animate-on-scroll fade-in-left delay-2">
+                    <!-- This image should be a single shoe with a transparent background (.png) for the best "floating" effect. -->
+                    <!-- Make sure you have 'hero-floating-shoe.png' in your 'images' folder. -->
+                    <img src="images/hero-floating-shoe.png" alt="Raj Ritik latest shoe model" class="animated-shoe">
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals Section: Showcases the latest shoe releases -->
+        <section id="new-arrivals" class="section-padding">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll fade-in-up">New Arrivals</h2>
+                <div class="product-grid">
+                    <!-- Product Card 1 -->
+                    <!-- 'animate-on-scroll' and 'fade-in-up' classes are for the JavaScript-triggered animation -->
+                    <div class="product-card animate-on-scroll fade-in-up delay-0">
+                        <!-- IMAGE: Make sure you have 'new-arrival-1-studio.jpg' in your 'images' folder. -->
+                        <img src="images/new-arrival-1-studio.jpg" alt="Ritik Glide" class="product-image">
+                        <div class="product-info">
+                            <h3>Ritik Glide</h3>
+                            <p class="price">$149.99</p>
+                            <a href="#" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <!-- 'animate-on-scroll' and 'fade-in-up' classes are for the JavaScript-triggered animation -->
+                    <div class="product-card animate-on-scroll fade-in-up delay-1">
+                        <!-- IMAGE: Make sure you have 'new-arrival-2-studio.jpg' in your 'images' folder. -->
+                        <img src="images/new-arrival-2-studio.jpg" alt="Ritik Velocity" class="product-image">
+                        <div class="product-info">
+                            <h3>Ritik Velocity</h3>
+                            <p class="price">$169.99</p>
+                            <a href="#" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <!-- 'animate-on-scroll' and 'fade-in-up' classes are for the JavaScript-triggered animation -->
+                    <div class="product-card animate-on-scroll fade-in-up delay-2">
+                        <!-- IMAGE: Make sure you have 'new-arrival-3-studio.jpg' in your 'images' folder. -->
+                        <img src="images/new-arrival-3-studio.jpg" alt="Ritik Elite" class="product-image">
+                        <div class="product-info">
+                            <h3>Ritik Elite</h3>
+                            <p class="price">$129.99</p>
+                            <a href="#" class="btn btn-secondary">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features/Technology Section: Highlights the innovative aspects and technology of the shoes -->
+        <section id="features" class="features-section section-padding">
+            <div class="container">
+                <div class="feature-content">
+                    <!-- Feature text and list of benefits -->
+                    <!-- 'animate-on-scroll' and 'fade-in-right' classes are for the JavaScript-triggered animation -->
+                    <div class="feature-text animate-on-scroll fade-in-right">
+                        <h2 class="section-title">Engineered for Excellence</h2>
+                        <p>At Raj Ritik, we push the boundaries of innovation. Our shoes feature advanced cushioning
+                            systems, breathable materials, and ergonomic designs to provide unmatched comfort and
+                            support, whether you're on the track or the street.</p>
+                        <ul>
+                            <li>Responsive Midsole Technology</li>
+                            <li>Ultra-Lightweight Construction</li>
+                            <li>Dynamic Traction Outsole</li>
+                            <li>Sustainable Materials</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <!-- Image showcasing a specific feature or technology -->
+                    <!-- 'animate-on-scroll' and 'fade-in-left' classes are for the JavaScript-triggered animation -->
+                    <div class="feature-image animate-on-scroll fade-in-left">
+                        <!-- IMAGE: Make sure you have 'features-tech-detail.jpg' in your 'images' folder. -->
+                        <img src="images/features-tech-detail.jpg" alt="Shoe technology showcase">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action Banner: Encourages visitors to take a specific action, like checking out limited editions -->
+        <section id="cta-banner" class="cta-banner">
+            <div class="container">
+                <!-- CTA content -->
+                <!-- 'animate-on-scroll' and 'fade-in-up' classes are for the JavaScript-triggered animation -->
+                <div class="cta-content animate-on-scroll fade-in-up">
+                    <h2>Limited Edition Drop</h2>
+                    <p>Don't miss out on our exclusive releases. Sign up for early access and special offers!</p>
+                    <a href="#" class="btn btn-cta">Shop Limited Editions</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section: Contains copyright information and secondary links -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Raj Ritik. All rights reserved.</p>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Link to our custom JavaScript file. Placed at the end of <body> for better performance. -->
+    <script src="script.js"></script>
+</body>
+
+</html>

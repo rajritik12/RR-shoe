@@ -1,0 +1,774 @@
+/* Basic Reset & Global Styles: These apply to the entire page */
+* {
+    margin: 0;
+    /* Removes default outside spacing */
+    padding: 0;
+    /* Removes default inside spacing */
+    box-sizing: border-box;
+    /* Makes sure padding and border don't increase element's size */
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Makes scrolling between sections animated rather than instant */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Sets the primary font from Google Fonts */
+    line-height: 1.6;
+    /* Spacing between lines of text */
+    color: #333;
+    /* Default text color (dark gray) */
+    background-color: #f0f2f5;
+    /* Light gray background for the whole page */
+    overflow-x: hidden;
+    /* Prevents horizontal scrollbars that might appear due to off-screen animations */
+}
+
+.container {
+    max-width: 1200px;
+    /* Limits the maximum width of content for readability */
+    margin: 0 auto;
+    /* Centers the container block horizontally on the page */
+    padding: 0 20px;
+    /* Adds 20px padding on the left and right inside the container */
+}
+
+a {
+    text-decoration: none;
+    /* Removes the default underline from links */
+    color: inherit;
+    /* Links will use the text color of their parent element */
+}
+
+ul {
+    list-style: none;
+    /* Removes bullet points from unordered lists */
+}
+
+/* Typography: Styles for headings and paragraphs */
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    /* Sets a different font for headings */
+    margin-bottom: 1rem;
+    /* Spacing below headings */
+    color: #222;
+    /* Darker gray for headings */
+}
+
+h1 {
+    font-size: 3.8rem;
+    /* Very large font size for main heading */
+    font-weight: 900;
+    /* Very bold */
+    line-height: 1.1;
+    /* Tighter line spacing for large heading */
+}
+
+h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    /* Centers all H2 headings */
+    margin-bottom: 3rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* Buttons: General and specific styles for different button types */
+.btn {
+    display: inline-block;
+    /* Allows padding and margin, but stays in line with text */
+    padding: 14px 30px;
+    border-radius: 50px;
+    /* Makes the buttons rounded */
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    /* Changes mouse cursor to a pointer when hovering */
+    transition: all 0.3s ease;
+    /* Smooth animation for all changes over 0.3 seconds */
+    text-align: center;
+    border: none;
+    /* Removes default button border */
+    background: transparent;
+}
+
+.btn-primary {
+    background-color: #000;
+    /* Black background */
+    color: #fff;
+    /* White text */
+    border: 2px solid #000;
+}
+
+.btn-primary:hover {
+    /* Styles when mouse hovers over a primary button */
+    background-color: #333;
+    transform: translateY(-3px) scale(1.02);
+    /* Lifts the button slightly and makes it a bit bigger */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    /* Adds a shadow */
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+}
+
+.btn-secondary:hover {
+    /* Styles when mouse hovers over a secondary button */
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-cta {
+    /* Specific style for a Call-To-Action button, usually more prominent */
+    background-color: #ff4500;
+    /* OrangeRed color */
+    color: #fff;
+    border: 2px solid #ff4500;
+    padding: 16px 35px;
+    font-size: 1.2rem;
+}
+
+.btn-cta:hover {
+    /* Styles when mouse hovers over the CTA button */
+    background-color: #e63900;
+    border-color: #e63900;
+    transform: scale(1.05);
+    /* Scales the button even more */
+    box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
+}
+
+/* Section Padding: Consistent vertical spacing for content sections */
+.section-padding {
+    padding: 80px 0;
+    /* 80px top and bottom padding, 0 left/right */
+}
+
+/* Header: Styles for the navigation bar at the top of the page */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow below the header */
+    position: sticky;
+    /* Makes the header "stick" to the top when you scroll down */
+    top: 0;
+    /* Sticks to the very top */
+    z-index: 1000;
+    /* Ensures the header stays on top of other content if they overlap */
+}
+
+header .container {
+    display: flex;
+    /* Uses Flexbox to align items horizontally */
+    justify-content: space-between;
+    /* Pushes the logo to the left and navigation to the right */
+    align-items: center;
+    /* Vertically centers the logo and navigation items */
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #000;
+    letter-spacing: -1px;
+    transition: color 0.3s ease;
+    /* Smooth color change on hover */
+}
+
+.logo:hover {
+    color: #ff4500;
+    /* Changes logo color on hover */
+}
+
+nav ul {
+    display: flex;
+    /* Uses Flexbox for navigation items */
+    gap: 30px;
+    /* Adds space between each navigation link */
+}
+
+nav a {
+    font-weight: 600;
+    font-size: 1.1rem;
+    position: relative;
+    /* Needed for the underline animation */
+    padding-bottom: 5px;
+    /* Space for the underline */
+    transition: color 0.3s ease;
+}
+
+/* Navigation underline animation: Creates an expanding underline on hover */
+nav a::after {
+    content: '';
+    /* Creates a pseudo-element (the underline) */
+    position: absolute;
+    /* Positions the underline relative to the link */
+    left: 0;
+    bottom: 0;
+    width: 0;
+    /* Starts with no width (invisible) */
+    height: 3px;
+    background-color: #ff4500;
+    /* Accent color for the underline */
+    transition: width 0.3s ease;
+    /* Animates the width change smoothly */
+}
+
+nav a:hover::after {
+    width: 100%;
+    /* Underline expands to full width on hover */
+}
+
+nav a:hover {
+    color: #ff4500;
+    /* Changes link text color on hover */
+}
+
+/* Hero Section: The main banner section */
+.hero-section {
+    /* BACKGROUND IMAGE: This loads 'hero-background.jpg' from your 'images' folder. */
+    background: url('images/hero-background.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+    /* Makes the hero section take up the full height of the browser window */
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* Needed for the dark overlay */
+    color: #fff;
+    /* White text color for content over background image */
+    overflow: hidden;
+    /* Important for the shoe animation; prevents parts of the shoe from showing outside the section */
+}
+
+/* Dark overlay for better text readability on top of the background image */
+.hero-section::before {
+    content: '';
+    /* Creates a pseudo-element (the overlay) */
+    position: absolute;
+    /* Positions it over the entire hero section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black overlay (0.5 is 50% opacity) */
+    z-index: 1;
+    /* Places it above the background image but below the text content */
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    /* Space between the text content and the shoe image */
+    position: relative;
+    /* Ensures the content within the container is above the overlay */
+    z-index: 2;
+    /* Puts content above the overlay (which has z-index 1) */
+}
+
+.hero-content {
+    flex: 1;
+    /* Allows this content block to grow and shrink */
+    max-width: 600px;
+    text-align: left;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    /* Adds a subtle shadow to text for better contrast */
+}
+
+.hero-content h1 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+}
+
+.hero-shoe-display {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    /* Aligns the shoe image to the right */
+    align-items: center;
+    max-width: 600px;
+    perspective: 1000px;
+    /* Enables 3D transforms for the child image */
+}
+
+.hero-shoe-display img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Adds a prominent shadow, creating a "floating" effect. Best with transparent PNGs. */
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.5));
+    transform: rotateY(-15deg) rotateX(5deg) scale(0.9);
+    /* Initial subtle 3D tilt and slight shrink */
+    transition: transform 0.8s ease-out;
+    /* Smooth transition for the hover effect */
+    will-change: transform;
+    /* Helps the browser optimize this element for animation */
+}
+
+/* Hero shoe animation on hero section hover */
+.hero-section:hover .hero-shoe-display img {
+    transform: rotateY(-5deg) rotateX(0deg) scale(1);
+    /* Less tilt, scales up on hover */
+}
+
+/* New Arrivals Section: Product display area */
+#new-arrivals {
+    background-color: #fff;
+}
+
+.product-grid {
+    display: grid;
+    /* Uses CSS Grid for arranging product cards */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Creates responsive columns that are at least 300px wide */
+    gap: 30px;
+    /* Space between each grid item (product card) */
+}
+
+.product-card {
+    background-color: #f8f8f8;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Hides anything that overflows the card's rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for hover effects */
+    text-align: center;
+    padding-bottom: 20px;
+    border: 1px solid #eee;
+}
+
+.product-card:hover {
+    /* Styles when mouse hovers over a product card */
+    transform: translateY(-10px) scale(1.02);
+    /* Lifts the card and slightly scales it */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    /* Makes the shadow more prominent */
+}
+
+.product-card .product-image {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    /* Ensures images fill the space without distortion, cropping if necessary */
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    /* Styles when mouse hovers over the image inside a product card */
+    transform: scale(1.05) rotate(2deg);
+    /* Subtle zoom and rotate effect */
+}
+
+.product-info {
+    padding: 20px 15px;
+}
+
+.product-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.6rem;
+}
+
+.product-info .price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ff4500;
+    margin-bottom: 1.5rem;
+}
+
+/* Features Section: Details about shoe technology */
+.features-section {
+    background-color: #f0f2f5;
+}
+
+.feature-content {
+    display: flex;
+    /* Uses Flexbox to arrange text and image side-by-side */
+    align-items: center;
+    gap: 60px;
+    /* Space between the text and image */
+}
+
+.feature-text {
+    flex: 1;
+    /* Allows this text block to grow and shrink */
+    padding-right: 30px;
+}
+
+.feature-text .section-title {
+    text-align: left;
+    /* Overrides the default center alignment for H2s */
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
+
+.feature-text ul {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    padding-left: 25px;
+}
+
+.feature-text li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    position: relative;
+    /* Needed for the custom checkmark */
+}
+
+.feature-text li::before {
+    /* Creates a custom checkmark icon before each list item */
+    content: '✓';
+    position: absolute;
+    left: -25px;
+    color: #ff4500;
+    font-weight: 700;
+}
+
+.feature-image {
+    flex: 1;
+    /* Allows this image block to grow and shrink */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+    /* Smooth transition for hover effect */
+}
+
+.feature-image:hover img {
+    /* Styles when mouse hovers over the feature image */
+    transform: scale(1.05) rotate(-1deg);
+    /* Zooms and slightly rotates the image */
+}
+
+/* Call to Action Banner: A prominent banner to encourage user interaction */
+.cta-banner {
+    /* BACKGROUND IMAGE: Loads 'cta-action-shot.jpg' from your 'images' folder. */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/cta-action-shot.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    margin: 60px 0;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cta-banner .container {
+    max-width: 800px;
+}
+
+.cta-banner h2 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    /* Shadow for text, makes it pop */
+}
+
+.cta-banner p {
+    font-size: 1.4rem;
+    margin-bottom: 3rem;
+    color: #e0e0e0;
+}
+
+/* Footer: The bottom section of the page */
+footer {
+    background-color: #222;
+    /* Dark background */
+    color: #aaa;
+    /* Light gray text */
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    /* Centers the footer links */
+    gap: 25px;
+    margin-top: 15px;
+}
+
+footer a {
+    color: #aaa;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+    /* White text on hover */
+}
+
+/* ---------------------------------------------------- */
+/*                  ANIMATION CLASSES                   */
+/* ---------------------------------------------------- */
+
+/* Base state for all elements that will animate into view when scrolled */
+.animate-on-scroll {
+    opacity: 0;
+    /* Starts completely invisible */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    /* Smooth transition for both visibility and position over 1 second */
+    transform: translateY(20px);
+    /* Default starting position: slightly moved down */
+}
+
+/* Specific initial states for different animation directions */
+.animate-on-scroll.fade-in-up {
+    transform: translateY(50px);
+    /* Starts further down, for an "upward" fade-in */
+}
+
+.animate-on-scroll.fade-in-left {
+    transform: translateX(-50px);
+    /* Starts from the left, for a "rightward" fade-in */
+}
+
+.animate-on-scroll.fade-in-right {
+    transform: translateX(50px);
+    /* Starts from the right, for a "leftward" fade-in */
+}
+
+/* Final state: This class is added by JavaScript when the element enters the viewport */
+.animate-on-scroll.visible {
+    opacity: 1;
+    /* Becomes fully visible */
+    transform: translateY(0) translateX(0);
+    /* Returns to its original position */
+}
+
+/* Animation Delays for Staggered Effects: Makes elements appear one after another */
+.animate-on-scroll.delay-0 {
+    transition-delay: 0s;
+}
+
+.animate-on-scroll.delay-1 {
+    transition-delay: 0.15s;
+}
+
+/* 0.15 seconds delay */
+.animate-on-scroll.delay-2 {
+    transition-delay: 0.3s;
+}
+
+.animate-on-scroll.delay-3 {
+    transition-delay: 0.45s;
+}
+
+.animate-on-scroll.delay-4 {
+    transition-delay: 0.6s;
+}
+
+
+/* ---------------------------------------------------- */
+/*                  RESPONSIVE DESIGN                   */
+/* ---------------------------------------------------- */
+
+/* Styles for screens smaller than 992px (e.g., larger tablets) */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .hero-section .container {
+        flex-direction: column;
+        /* Stacks the hero content and shoe image vertically */
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .hero-shoe-display {
+        justify-content: center;
+        /* Centers the shoe image */
+    }
+
+    .hero-shoe-display img {
+        transform: none;
+        /* Resets the initial 3D transform for smaller screens */
+        max-width: 80%;
+    }
+
+    .hero-section:hover .hero-shoe-display img {
+        transform: none;
+        /* Resets the hover 3D transform for smaller screens */
+    }
+
+    .feature-content {
+        flex-direction: column;
+        /* Stacks feature text and image vertically */
+    }
+
+    .feature-text {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .feature-text .section-title {
+        text-align: center;
+        /* Centers the H2 title in feature section */
+    }
+
+    .feature-text ul {
+        padding-left: 0;
+        text-align: left;
+        margin: 1.5rem auto;
+        /* Centers the list block */
+        max-width: 400px;
+    }
+
+    .feature-text li {
+        margin-left: 25px;
+        /* Adjusts the checkmark position */
+    }
+
+    .cta-banner h2 {
+        font-size: 2.5rem;
+    }
+
+    .cta-banner p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Styles for screens smaller than 768px (e.g., larger mobile phones) */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        /* Stacks header logo and nav vertically */
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        /* Allows navigation items to wrap to the next line if needed */
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        /* Changes product grid to a single column */
+    }
+
+    .product-card {
+        margin: 0 auto;
+        /* Centers product cards */
+        max-width: 350px;
+    }
+
+    .section-padding {
+        padding: 60px 0;
+        /* Reduces vertical padding for sections */
+    }
+
+    .cta-banner {
+        padding: 80px 20px;
+        margin: 40px 0;
+    }
+
+    .cta-banner h2 {
+        font-size: 2rem;
+    }
+
+    .cta-banner p {
+        font-size: 1rem;
+    }
+}
+
+/* Styles for screens smaller than 480px (e.g., smaller mobile phones) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1rem;
+    }
+
+    .btn-cta {
+        padding: 14px 28px;
+        font-size: 1.1rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+}
